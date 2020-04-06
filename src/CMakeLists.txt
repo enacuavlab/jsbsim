@@ -121,6 +121,8 @@ endif()
 
 add_executable(JSBSim JSBSim.cpp)
 target_link_libraries(JSBSim libJSBSim)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/JSBSim.pc.in ${CMAKE_CURRENT_BINARY_DIR}/JSBSim.pc @ONLY)
 
 install(TARGETS JSBSim RUNTIME DESTINATION bin COMPONENT runtime)
 install(FILES ${HEADERS} DESTINATION include/JSBSim COMPONENT devel)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/JSBSim.pc DESTINATION lib${LIB_SUFFIX}/pkgconfig COMPONENT devel)
