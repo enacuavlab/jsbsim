@@ -4,6 +4,6 @@ libdir=@CMAKE_INSTALL_PREFIX@/lib@LIB_SUFFIX@
 includedir=@CMAKE_INSTALL_PREFIX@/include
 Name: JSBSim
 Description: JSBSim (Paparazzi version)
-Version: @PACKAGE_VERSION@
+Version: @PROJECT_VERSION@
 Libs: -L${libdir} -lJSBSim
 Cflags: -I${includedir}/JSBSim
